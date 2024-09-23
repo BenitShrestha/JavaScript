@@ -70,3 +70,43 @@ choice = 'name';
 person[choice] = 'jeff';
 console.log(person[choice]);
 console.log(person['name']); // Same as above
+
+// Array 
+let selectedColors = ['red', 'green', 'blue'];
+console.log(selectedColors);
+console.log(selectedColors[0]); // Indexing from zero
+
+selectedColors[1] = 'pink'; // Dynamic
+console.log(selectedColors);
+
+selectedColors[3] = 'wayne'; // Add elements
+console.log(selectedColors);
+
+selectedColors[2] = 77; // Any type
+console.log(selectedColors); 
+
+console.log(typeof selectedColors); // Shows as object
+console.log(selectedColors.length); // Length of the array
+
+// Functions
+function greet() {
+    console.log("Hello");
+
+} // Simple Function 
+
+greet(); // Function Call
+
+// Performing a task
+function greetname(name, lastname){
+    console.log("Hello " + name  + ' ' + lastname);
+} // Parameterized Function
+
+greetname('kelso'); // Call with Argument, since no lastname: undefined shown
+greetname('kelso', 'johnson'); // Correct way
+
+// Calculating a value
+function add(num1, num2){
+    return num1 + num2;
+}
+
+console.log(add(9, 7)); // Shows 16
