@@ -103,3 +103,44 @@ console.log("After: ", numarr1); // Doesn't actually affect the main array
 console.log("\nTest-Rev: ", numarr1);
 console.log("Reversed: ", numarr1.reverse());
 console.log("After: ", numarr1); // Main array is changed
+
+// Using Loops with Array
+console.log("\n");
+console.log("Using Loops with Array");
+
+let A = [12, 45, 54, 23, 72, 65, 27, 712]
+console.log(A);
+
+// For Each
+A.forEach(element => {
+    console.log(element**2)
+}) // For each element perform the give operation 
+
+let B = A.forEach(id => {
+    return id * 9
+})
+console.log("\n", B) // Undefined
+
+// Array From 
+let C  = 'dingleberry'
+console.log(Array.from(C)) // Changes string to array
+
+// For of loop
+console.log('\nFor of Loop:')
+for (let element of A) {
+    console.log(element)
+}
+
+// For in loop
+console.log('\nFor in Loop:')
+for (let id in A) {
+    console.log(id, ":", A[id])
+}
+
+console.log('\nFor in Loop:')
+for (let id in C) {
+    console.log(id, ":", C[id])
+}
+
+// Map, Filter, Reduce
+
