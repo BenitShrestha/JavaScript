@@ -4,7 +4,7 @@ let list_of_numbers = []
 let correct
 let guess
 let chances = 3
-let i = 0
+let i = 1
 
 function randomNumber(count, min, max) { // Math.random() generates numbers between range 0 and 1
     for (let i = 0; i < count; i++) { // max - min + 1 done to ensure all numbers lie within range
@@ -15,19 +15,24 @@ function randomNumber(count, min, max) { // Math.random() generates numbers betw
     return list_of_numbers, correct
 }
 
-list_of_numbers, correct = randomNumber(10, 1, 100)
+let min = 1
+let max = 100 
+let count = 10
+list_of_numbers, correct = randomNumber(count, min, max)
 console.log(list_of_numbers, '\n', correct)
 
 do{
+    alert("Chances left: " + chances)
     guess = Number.parseInt(prompt("Guess a number: "))
-    i++
+    chances--
     if (guess == correct) {
         alert("Right Answer!", guess)
     }
-    else if (i >= chances) {
-        alert('Chances have run out!')
+    else if (guess > correct) {
+        alert('Answer is lesser')
     }
-    else if ( guess != correct) {
-        alert("Wrong Answer!", guess)
+    else if (guess < correct) {
+        alert('Answer is higher')
     }
-}while(guess != correct && i < chances)
+}while(guess != correct && i <= chances)
+console.log("3 Chances gone!")
