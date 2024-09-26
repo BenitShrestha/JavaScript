@@ -144,3 +144,40 @@ for (let id in C) {
 
 // Map, Filter, Reduce
 
+console.log('\nMap:') // Applying specific function to the entire list
+let D = A.map((i) => {
+    return i * 9
+})
+console.log(D)
+
+let names = ['bling', 'grew', 'post', 'get', 'plaster']
+names.map((name) => {
+    console.log(name[0].toUpperCase() + name.slice(1)) // Uppercase first letter and append from second letter
+})
+
+console.log('\nFilter: ') // Advanced Sorting
+let numbers = [12, 45, 84, 90, 34, 78, 89, 342, 11]
+let odd = numbers.filter((number) => {
+    return (number % 2 != 0)
+})
+console.log(odd)
+
+let l_names = names.filter((name) => {
+    if (name.includes('l')) {
+        return name
+    }
+})
+console.log(l_names)
+
+console.log('\nReduce: ') // Operate on elements of the list
+let addNumbers = numbers.reduce((number1, number2) => { // Accumulator, Current
+    return number1 + number2
+})
+
+console.log(addNumbers, '\n')
+
+let numbers1 = [1, 2, 3] 
+let singleAdd = numbers1.reduce((number) => { // Squaring
+    return number + number 
+})
+console.log(singleAdd) // Use reduce with 2 parameters
