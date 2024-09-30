@@ -1,6 +1,6 @@
 console.log("SetTimeout and SetInterval")
 
-alert('Hello')
+// alert('Hello')
 
 // setTimeout - Set time delay in ms
 /* let timerID = setTimeout(function() {
