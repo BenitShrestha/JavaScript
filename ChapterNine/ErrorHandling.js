@@ -68,7 +68,7 @@ catch(error) {
     console.log(error.stack) // Location of file
 } */ 
 
-try {
+/* try {
     let age = Number.parseInt(prompt("Enter your age: "))
     if (age < 18) {
         throw new SyntaxError('Too Young')
@@ -80,4 +80,38 @@ catch(error) {
     alert(error.message)
     console.log(error.stack)
 }
-// Other error types: RangeError, TypeError etc
+// Other error types: RangeError, TypeError etc */
+
+// The Finally Clause
+console.log('The Finally Clause')
+
+// let Process = '11'
+try {
+    console.log(Process)
+}
+catch(error) {
+    console.log(error)
+    // console.log(Process1)
+}
+finally {
+    console.log('Finally') // This block will run regardless
+}
+
+// If the catch block has error, it will pop up after finally block is run
+
+let func = () => {
+    try {
+        let a = 10
+        console.log(b)
+        return a
+    }
+    catch(err) {
+        console.log(err)
+    }
+    finally {
+        console.log('Finally from function') // This block will always run, used for stuff like exit loop, close file.
+    }
+}
+
+let a = func()
+console.log(a)
