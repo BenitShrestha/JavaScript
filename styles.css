@@ -1,0 +1,21 @@
+.red{
+    color: red;
+    background: black;
+}
+
+.pink{
+    background: pink;
+}
+
+.green-text{
+    color: green;
+}
+
+.movement{
+    padding: 10px;
+    margin: 10px;
+}
+
+.red-text{
+    color: red;
+}

@@ -1,0 +1,20 @@
+.bulb{
+    height: 340px;
+    width: 340px;
+}
+
+.bulbcontainerred{
+    background: red;
+}
+
+.bulbcontainerblue{
+    background: blue;
+}
+
+.bulbcontainergreen{
+    background: green;
+}
+
+.bms{
+    display: flex;
+}
