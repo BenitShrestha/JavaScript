@@ -1,0 +1,6 @@
+gitignore
+main.html
+package-lock.json
+package.json
+styles.css
+node_modules/

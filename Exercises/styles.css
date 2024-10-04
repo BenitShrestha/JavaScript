@@ -2,3 +2,8 @@
     width: 200px;
     background: aqua;
 }
+
+.hackerman {
+    color: green;
+    text-shadow: 0 0 10px lime;
+}
