@@ -16,7 +16,11 @@ let d = a.getDate()
 console.log("Date: " + d)
 
 let months = {
-    1: 'January', 2: 'February', 8: 'September'
+    1: 'January', 2: 'February', 8: 'September', 9: 'October'
+}
+
+let days = { // Starts from zero
+    0: 'Sunday', 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday'
 }
 
 const clock = () => {
@@ -27,6 +31,7 @@ const clock = () => {
     let seconds = a.getSeconds()
     let date = a.getDate()
     let month = a.getMonth()
+    let day = a.getDay()
     let meridian = ''
 
     if (hours > 12) {
@@ -42,8 +47,13 @@ const clock = () => {
     seconds = seconds<10?'0'+seconds:seconds;
     date = date<10?'0'+date:date;
     month = months[month]
-
-    document.getElementById('clock').textContent = `${date} ${month}, ${hours}:${minutes}:${seconds} ${meridian}`
+    day = days[day]
+    document.getElementById('clock').textContent = `${day}, ${date} ${month}, ${hours}:${minutes}:${seconds} ${meridian}`
 }
 
 setInterval(clock, 1000)
+
+// New functions 
+console.log(new Date().toTimeString())
+console.log(new Date().toDateString())
+console.log(new Date().getDay()) // Starts from zero
