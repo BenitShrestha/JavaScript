@@ -1,6 +1,6 @@
 console.log('Hackerman')
 
-let namez = prompt("Enter a name to start the operation: ")
+/* let namez = prompt("Enter a name to start the operation: ")
 
 let initiate = async () =>{
     return new Promise((resolve, reject) => {
@@ -40,4 +40,34 @@ let mainz = async () => {
 }
 
 mainz()
-hackerman.appendChild(h2)
+hackerman.appendChild(h2) */
+
+// Alternately
+let logs = [
+    'Intitating the hack',
+    'Searching the database',
+    'Target FOUND!',
+    'Cracking Credentials',
+    'Found username and password',
+    'Nearly completion',
+    'Hacking Complete',
+    'Data sent to the hack server'
+]
+
+let delay = async (time) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {resolve(true)}, time * 1000)
+    })
+} 
+
+let hackmsg = async (message) => {
+    await delay(2)
+    console.log(message)
+} 
+
+// Async IIFE - Immediately Invoked Function Expression
+(async () => {
+    for(let i =0; i  < logs.length; i++) {
+        await hackmsg(logs[i])
+    }
+})()
