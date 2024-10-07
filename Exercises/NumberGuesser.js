@@ -19,7 +19,7 @@ let min = 1
 let max = 100 
 let count = 10
 list_of_numbers, correct = randomNumber(count, min, max)
-console.log(list_of_numbers, '\n', correct)
+console.log(list_of_numbers, '\nCorrect number: ', correct)
 
 do{
     alert("Chances left: " + chances)

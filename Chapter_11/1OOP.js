@@ -1,4 +1,4 @@
-console.log('Object Oriented Programming')
+/* console.log('Object Oriented Programming')
 
 // Abstraction, Encapsulation, Inheritance and Polymorphism
 
@@ -32,4 +32,35 @@ console.log(a.name)
 console.log(a.namez) // Same effect
 // Prototypes follow a chain, in case of a.run(), checks itself first, then other prototypes 'a' is linked to
 
-// Old way of doing OOP, now Classes and Objects are preferred
+// Old way of doing OOP, now Classes and Objects are preferred */
+
+console.log('Classes and Objects')
+
+class MovieTicket {
+    // Method 1
+    submit() {
+        alert(`${this.name} with ID: ${this.id} has submitted for the ticket`)
+    }
+
+    // Method 2
+    cancel() {
+        alert('You have cancelled the ticket ' + this.name)
+    }
+
+    // Method 3
+    namez(aname, regnum) {
+        this.name = aname
+        this.id = regnum
+    }
+}
+
+let guy1 = new MovieTicket() // Creates an object
+let guy2 = new MovieTicket()
+
+guy1.namez('Guy1', 2222)
+guy2.namez('Guy2', 3333)
+
+guy1.submit()
+guy2.submit()
+
+guy2.cancel()
