@@ -105,5 +105,5 @@ let ask = confirm("Do you want to hear a joke?")
 let result = jokes[Math.floor(Math.random() * jokes.length)]
 
 if (ask){
-    document.write(`<br>" ${result} " </br>`)
+    document.write(`<br>" ${result} "</br>`)
 }
