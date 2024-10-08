@@ -34,7 +34,7 @@ console.log(a.namez) // Same effect
 
 // Old way of doing OOP, now Classes and Objects are preferred */
 
-console.log('Classes and Objects')
+/* console.log('Classes and Objects')
 
 class MovieTicket {
     // Method 1
@@ -63,4 +63,41 @@ guy2.namez('Guy2', 3333)
 guy1.submit()
 guy2.submit()
 
-guy2.cancel()
+guy2.cancel() */
+
+console.log('Constructors')
+
+class netflix {
+    /* constructor() { // Without argument
+        console.log('Constructor is called') // Runs everything an object is created
+    } */ 
+
+    constructor(name, id, time) { // With arguments
+        console.log(`Constructor called for ID: ${id} with user having Name: ${name}`)
+        if (time .length > 2) {
+            console.log('Choose upto 2 time slots only') // Time slot is undefined in this case
+        }
+        else {
+            this.time = [time]
+        }
+        this.name = name
+        this.id = id
+    }
+
+    preview() {
+        console.log(`\n\nPreviewing...\nName: ${this.name}\nID: ${this.id}\nTime Slot: ${this.time}`)
+    }
+    cancel() {
+        this.time = 0
+        console.log(`\n\nCancelling...\nName: ${this.name}\nID: ${this.id}\nTime Slot: ${this.time}`)
+    }
+}
+
+let net1 = new netflix('Test1', 1234, ['10:00', ' 11:00', ' 12:00'])
+let net2 = new netflix('Guy3', 4444, ['10:00', ' 11:00'])
+
+net1.preview()
+net2.preview()
+
+net1.cancel() // Reset timeslot to 0 when cancelling
+net2.cancel()
