@@ -65,12 +65,12 @@ guy2.submit()
 
 guy2.cancel() */
 
-console.log('Constructors')
+/* console.log('Constructors')
 
 class netflix {
-    /* constructor() { // Without argument
-        console.log('Constructor is called') // Runs everything an object is created
-    } */ 
+    // constructor() { // Without argument
+    //     console.log('Constructor is called') // Runs everything an object is created
+    // }
 
     constructor(name, id, time) { // With arguments
         console.log(`Constructor called for ID: ${id} with user having Name: ${name}`)
@@ -100,4 +100,43 @@ net1.preview()
 net2.preview()
 
 net1.cancel() // Reset timeslot to 0 when cancelling
-net2.cancel()
+net2.cancel() */
+
+console.log('Inheritance and External Keywords')
+
+class Person {
+    constructor(name, occupation) {
+        this.name = name 
+        this.job = occupation
+        console.log('Constructor called for ' + name)
+    }
+
+    status() {
+        console.log(`\nName: ${this.name}\nJob: ${this.job}`)
+    }
+
+    work() {
+        console.log(`${this.name} is working`)
+    }
+}
+
+class Engineer extends Person {
+    tobuild() {
+        console.log(`Engineer ${this.name} is building something`)
+    }
+
+    todesign(){
+        console.log(`Engineer ${this.name} is designing something`)
+    }
+}
+
+let per1 = new Person('Benit', 'Dancer')
+let eng1 = new Engineer('Jeff', 'Engineer')
+
+per1.status()
+eng1.status()
+
+per1.work()
+eng1.work() // Can use methods of its parent class
+
+eng1.todesign()
