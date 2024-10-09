@@ -1,4 +1,4 @@
-console.log("Static Methods")
+/* console.log("Static Methods")
 
 // Static methods aren't bound to any objects, only the class itself can access it, use for interclass communication
 class Person {
@@ -20,4 +20,5 @@ class Person {
 let p1 = new Person('benben') // 2 Step
 console.log(p1.upper())
 
-p1.print() // Single process
+p1.print() // Single process */
+
