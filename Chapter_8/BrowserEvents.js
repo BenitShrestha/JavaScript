@@ -3,13 +3,13 @@ console.log("Browser Events");
 // Access the second button
 let btn2 = document.getElementsByTagName('button')[1]
 
-/* btn2.onclick = () => {
+btn2.onclick = () => {
     console.log('Second Button Clicked')
 } 
 
 btn2.onmouseenter = () => {
     console.log('Second Button Mouse Enter') // When mouse is hovered over the button
-} */
+}
 
 // Add and remove event listeners
 btn2.addEventListener('click', () => {
