@@ -4,10 +4,10 @@ let print = (x) => console.log(x)
 // Promise of code execution, has states: pending, resolved, rejected. Can be assigned a result. Done so operations are asynchronous.
 // Ensures any operation inside the Promise block is executed in the background asynchronously
 
-/* let promise = new Promise(function(resolve, reject){
+let promise = new Promise(function(resolve, reject){
     // alert('Alert from promise')
     resolve(99) // Whichever state comes first is saved, 99 is value of fulfil state
-    reject('Error') // Ignored unless resolve is removed
+    // reject('Error') // Ignored unless resolve is removed
     // In case of rejection, we require error handling or else it shows up as uncaught error
 })
 
@@ -16,7 +16,7 @@ setTimeout(() => {
     console.log('Hello 2')
 }, 1000)
 console.log('Hello 3') // Order of operation 1, 3, 2. Because setTimeout is asynchronous
-console.log(promise) // Like synchronous, Hello 2 appears after */
+console.log(promise) // Like synchronous, Hello 2 appears after
 
 // .then() & .catch() Methods
 // Additional info: resolve:value, reject:error. We can run multiple promises in parallel.
@@ -42,8 +42,8 @@ let p2 = new Promise((resolve, reject) => {
     // console.log('Promise 2 is pending')
     setTimeout(() => {
         // console.log("Promise 2 is rejected now")
-        // resolve('P2 result')
-        reject(new Error('P2 error'))
+        resolve('P2 result')
+        // reject(new Error('P2 error'))
     }, 5000)
 })
 

@@ -7,12 +7,14 @@ class PasswordGenerator {
     }
     generate() {
         let pass = ''
+
         let comps = {
             'upper': '',
             'lower': '',
             'num': '',
             'symb': ''
         }
+
         let collection = {
             1 : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
             2 : 'abcdefghijklmnopqrstuvwxyz',
@@ -22,6 +24,7 @@ class PasswordGenerator {
 
         // console.log('Collection: ' + collection[Math.floor(Math.random() * Object.keys(collection).length) + 1])
         // console.log(collection[1][Math.floor(Math.random() * collection[1].length)])
+        
         if (this.str == 'strong') {
             let counts = this.distri()
             for(let i = 0; i < counts['uppercount']; i++) {

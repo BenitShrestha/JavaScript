@@ -7,7 +7,7 @@ let alertfunc = (value) => {
 }
 
 // Attaching .then() calls
-/* let p1 = new Promise((resolve, reject) => {
+let p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('P1 resolution')
     }, 2000)
@@ -41,7 +41,7 @@ p1.then((value) => { //
     (error) => {
         console.log(error)
     } // To catch the error using .then(), make sure to use external function (alertfunc here) in place of resolution function
-) */
+)
 
 // Loadscript function using promises
 /* let loadscript = (src) => {
@@ -75,7 +75,7 @@ p1.then((value) => {
 }) // If any .then() fails, it finds nearest .catch() */
 
 // Attaching multiple handlers to a promise
-print("2. Attaching multiple handlers to a Promise")
+// print("2. Attaching multiple handlers to a Promise")
 
 // Different from Promise Chaining, as it doesn't depend on previous .then()/.catch() handlers. Attaching multiple handlers is done independently
 /*let p1 = new Promise((resolve, reject) => {
@@ -101,7 +101,7 @@ p1.catch((error) => {
    // When promise is resolved, .then() handlers are executed, else .catch() handlers. */
 
 // Promise API 
-print('3. Promise API - 6 static methods')
+/* print('3. Promise API - 6 static methods')
 
 let p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -121,7 +121,7 @@ let p3 = new Promise((resolve, reject) => {
         resolve('P3 resolution')
         // reject('P3 error')
     }, 3000)
-})
+}) */
 
 // Promise.all()
 /* promise_all = Promise.all([p1, p2, p3])
@@ -152,8 +152,8 @@ promise_any.then(alertfunc,
 ) */
 
 // Promise.resolve() & Promise.reject()
-promise_resolve = Promise.resolve(24)
+/* promise_resolve = Promise.resolve(24)
 promise_resolve.then((value) => print(value))
 
 promise_reject = Promise.reject(33)
-promise_reject.catch((error) => print(error)) // Directly assign values/reasons 
+promise_reject.catch((error) => print(error)) // Directly assign values/reasons */

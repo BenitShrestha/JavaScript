@@ -47,7 +47,7 @@ loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundl
 loadscripts('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', goodbye) */
 
 // Callback with Arguments
-/* let loadstyle = (src, callback) => {
+let loadstyle = (src, callback) => {
     let link = document.createElement('link')
     link.rel = 'stylesheet'
     link.href = src
@@ -62,10 +62,10 @@ let goodmorning = (src) => {
     console.log('Good Morning: ' + src)
 }
 
-loadstyle('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmorning) // Just call the function, no need to put arguments */
+loadstyle('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmorning) // Just call the function, no need to put arguments
 
 // Error Handling
-let loadstyle = (src, callback) => {
+/* let loadstyles = (src, callback) => {
     let link = document.createElement('link')
     link.rel = 'stylesheet'
     link.href = src
@@ -81,16 +81,16 @@ let loadstyle = (src, callback) => {
     }
 }
 
-let goodmorning = (error, src) => {
+let goodmornings = (error, src) => {
     if (error) {
         console.log(error)
     }
     console.log('Good Morning: ' + src)
 }
 
-loadstyle('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmorning) // Just call the function, no need to put arguments
+loadstyles('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmornings) // Just call the function, no need to put arguments
 // Since, goodmorning is assigned not invoked, execution will take time, non-synchronous
-loadstyle('https://cdn.jsdlivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmorning) 
+loadstyles('https://cdn.jsdlivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', goodmornings) */
 
 /* Asynchronous operations like the ones above can't be used synchronously with other operations
    Check asynchronous programming at top of code to view 
