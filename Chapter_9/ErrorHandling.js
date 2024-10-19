@@ -1,6 +1,6 @@
 console.log('Error Handling: Try and Catch')
 
-/* setTimeout(() => {
+setTimeout(() => {
     console.log('Process 1')
 }, 1000)
 
@@ -42,7 +42,7 @@ setTimeout(() => {
     catch(err) {
         // alert(err)
     }
-}) */
+})
 
 // Error Object and Custom Errors
 console.log('Error Object and Custom Errors')
@@ -58,7 +58,7 @@ catch(error) {
 } */
 
 // Custom error
-/* try {
+try {
     console.log(Process) // Doesn't throw the error message below, just says not defined
     // throw new Error('This is bad')
     throw new ReferenceError('This is also bad')
@@ -66,9 +66,9 @@ catch(error) {
 catch(error) {
     console.log(error.name + '\n' + error.message)
     console.log(error.stack) // Location of file
-} */ 
+}
 
-/* try {
+try {
     let age = Number.parseInt(prompt("Enter your age: "))
     if (age < 18) {
         throw new SyntaxError('Too Young')
@@ -80,7 +80,7 @@ catch(error) {
     alert(error.message)
     console.log(error.stack)
 }
-// Other error types: RangeError, TypeError etc */
+// Other error types: RangeError, TypeError etc
 
 // The Finally Clause
 console.log('The Finally Clause')

@@ -38,3 +38,15 @@ let info = {
 console.log({...info}) // Print objects directly using this
 console.log({...info, names: 'benit'}) // {object, Override}
 console.log({names: 'hobo', ...info}) // Alternate way, no changes
+
+// Scopes: Block, Function, Global
+// Local: Block, Function 
+
+let glob = 'global'
+{
+    let loca = 'local'
+    console.log(`Inside curlies: ${glob}, ${loca}`)
+}
+
+console.log(`Outside curlies: ${glob}`)
+// loca doesn't work outside curly braces (block)
